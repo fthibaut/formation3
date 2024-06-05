@@ -20,7 +20,7 @@ jobs:
 
       - name: Build an image from Dockerfile
         run: |
-          docker build -t ghcr.io/${{ github.repository_owner }}/${{ matrix.file }}:latest ./docker-ansible/fil-rouge/7/${{ matrix.file }}
+          docker build -t ghcr.io/${{ github.repository_owner }}/${{ matrix.file }}:latest ./${{ matrix.file }}
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@0.20.0
