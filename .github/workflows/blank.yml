@@ -41,6 +41,6 @@ jobs:
       - name: Build and push Docker Image to GHCR and DockerHub
         uses: docker/build-push-action@v5
         with:
-          context: ./docker-ansible/fil-rouge/7/${{ matrix.file }}
+          context: ./${{ matrix.file }}
           push: true
           tags: ${{ secrets.DOCKERHUB_USER }}/${{ matrix.file }}:latest
